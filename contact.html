@@ -9,16 +9,53 @@
 <body class="bg-[#0d1117] text-white">
 
   <!-- Navigation -->
-  <header class="fixed top-6 left-1/2 transform -translate-x-1/2 z-30 w-full max-w-5xl rounded-full bg-slate-800 bg-opacity-50 backdrop-blur-md">
-    <nav class="flex justify-center space-x-6 py-2 px-6 text-sm md:text-base text-slate-300">
-      <a href="index.html" class="hover:text-cyan-400">Home</a>
-      <a href="index.html" class="hover:text-cyan-400">Skills</a>
-      <a href="experince.html" class="hover:text-cyan-400">Experience</a>
-      <a href="education.html" class="hover:text-cyan-400">Education</a>
-      <a href="projects.html" class="hover:text-cyan-400">Projects</a>
-      <a href="contact.html" class="text-white font-semibold bg-gradient-to-r from-cyan-600 to-blue-500 px-4 py-1 rounded-full ring-2 ring-blue-400 ring-offset-2 ring-offset-slate-900">Contact</a>
+  <header class="w-full bg-slate-800 bg-opacity-50 backdrop-blur-sm fixed top-6 left-1/2 transform -translate-x-1/2 rounded-full max-w-5xl z-30">
+    <nav class="flex items-center justify-between px-4 py-2 md:px-6" aria-label="Primary navigation">
+      <!-- Logo or Brand -->
+      <span class="text-cyan-400 font-bold text-lg md:text-xl select-none">Niraj Kumar</span>
+      <!-- Hamburger Button (Mobile) -->
+      <button id="nav-toggle" class="md:hidden flex items-center px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Toggle navigation">
+        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <!-- Menu Links -->
+      <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center gap-y-2 md:gap-y-0 md:gap-x-4 lg:gap-x-6 absolute md:static top-14 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent rounded-b-2xl md:rounded-none shadow-lg md:shadow-none z-40">
+        <a href="index.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          Home
+        </a>
+        <a href="index.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          Skills
+        </a>
+        <a href="experince.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          Experience
+        </a>
+        <a href="education.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          Education
+        </a>
+        <a href="projects.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          Projects
+        </a>
+        <a href="contact.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full text-white font-semibold bg-gradient-to-r from-cyan-600 to-blue-500 ring-2 ring-blue-400 ring-offset-2 ring-offset-slate-900 hover:brightness-110 transition" aria-current="page">
+          Contact
+        </a>
+      </div>
     </nav>
   </header>
+  <script>
+    // Toggle menu for mobile
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+    // Optional: Close menu when clicking a link (mobile UX)
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth < 768) navMenu.classList.add('hidden');
+      });
+    });
+  </script>
 
   <!-- Contact Section -->
   <section class="pt-36 pb-20 px-6 md:px-16 max-w-7xl mx-auto">
@@ -68,8 +105,8 @@
 
     </div>
   </section>
-<footer class="text-center text-slate-400 py-4">
-  © 2025 Niraj Kumar. All rights reserved.
-</footer>
+  <footer class="text-center text-slate-400 py-4">
+    © 2025 Niraj Kumar. All rights reserved.
+  </footer>
 </body>
 </html>
