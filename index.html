@@ -46,33 +46,58 @@
 <body class="bg-slate-900 text-slate-200 font-sans min-h-screen flex flex-col">
 
   <header class="w-full bg-slate-800 bg-opacity-50 backdrop-blur-sm fixed top-6 left-1/2 transform -translate-x-1/2 rounded-full max-w-5xl z-30">
-    <nav class="flex justify-center space-x-6 py-2 px-6 text-sm md:text-base text-slate-300" aria-label="Primary navigation">
-      <a href="index.html" class="group flex items-center px-4 py-1 rounded-full bg-gradient-to-r from-cyan-600 to-green-500 text-white font-semibold ring-2 ring-green-400 ring-offset-2 ring-offset-slate-900 hover:brightness-110 transition" aria-current="page">
-        <svg class="w-5 h-5 mr-2 opacity-90" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9-1.5 1.5L12 6l-7.5 7.5z" /></svg>
-        Home
-      </a>
-      <a href="index.html" class="group flex items-center px-4 py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
-        <svg class="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v16l10-8z"/></svg>
-        Skills
-      </a>
-      <a href="experince.html" class="group flex items-center px-4 py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
-        <svg class="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2H4zm0 14h16v2H4zm0-7h16v2H4z"/></svg>
-        Experience
-      </a>
-      <a href="education.html" class="group flex items-center px-4 py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
-        <svg class="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"/></svg>
-        Education
-      </a>
-      <a href="projects.html" class="group flex items-center px-4 py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
-        <svg class="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/></svg>
-        Projects
-      </a>
-      <a href="education.html" class="group flex items-center px-4 py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
-        <svg class="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20v16H2z"/></svg>
-        Contact
-      </a>
+    <nav class="flex items-center justify-between px-4 py-2 md:px-6" aria-label="Primary navigation">
+      <!-- Logo or Brand -->
+      <span class="text-cyan-400 font-bold text-lg md:text-xl select-none">Niraj Kumar</span>
+      <!-- Hamburger Button (Mobile) -->
+      <button id="nav-toggle" class="md:hidden flex items-center px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Toggle navigation">
+        <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <!-- Menu Links -->
+      <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center gap-y-2 md:gap-y-0 md:gap-x-4 lg:gap-x-6 absolute md:static top-14 left-0 w-full md:w-auto bg-slate-800 md:bg-transparent rounded-b-2xl md:rounded-none shadow-lg md:shadow-none z-40">
+        <a href="index.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full bg-gradient-to-r from-cyan-600 to-green-500 text-white font-semibold ring-2 ring-green-400 ring-offset-2 ring-offset-slate-900 hover:brightness-110 transition md:bg-none md:text-slate-300 md:ring-0 md:hover:bg-slate-700 md:hover:text-cyan-400" aria-current="page">
+          <svg class="w-5 h-5 mr-2 opacity-90" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9-1.5 1.5L12 6l-7.5 7.5z" /></svg>
+          Home
+        </a>
+        <a href="index.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          <svg class="w-5 h-5 mr-2 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M9 4v16l10-8z"/></svg>
+          Skills
+        </a>
+        <a href="experince.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          <svg class="w-5 h-5 mr-2 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v2H4zm0 14h16v2H4zm0-7h16v2H4z"/></svg>
+          Experience
+        </a>
+        <a href="education.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          <svg class="w-5 h-5 mr-2 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z"/></svg>
+          Education
+        </a>
+        <a href="projects.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          <svg class="w-5 h-5 mr-2 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/></svg>
+          Projects
+        </a>
+        <a href="education.html" class="flex items-center px-4 py-2 md:px-3 md:py-1 rounded-full hover:bg-slate-700 hover:text-cyan-400 transition">
+          <svg class="w-5 h-5 mr-2 opacity-70" fill="currentColor" viewBox="0 0 24 24"><path d="M2 4h20v16H2z"/></svg>
+          Contact
+        </a>
+      </div>
     </nav>
   </header>
+  <script>
+    // Toggle menu for mobile
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+    // Optional: Close menu when clicking a link (mobile UX)
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if(window.innerWidth < 768) navMenu.classList.add('hidden');
+      });
+    });
+  </script>
 
   <main id="home" class="flex-grow container mx-auto px-6 py-32 md:py-40 max-w-7xl flex flex-col md:flex-row items-center gap-24">
     <!-- Left Intro Section -->
@@ -89,7 +114,7 @@
       <p class="mt-7 text-slate-300 text-base leading-relaxed max-w-md">Java 🚀 | IoT Projects 🔧 | Exploring Cybersecurity & React 💻 ✨</p>
       <div class="mt-10 flex space-x-6 max-w-xs">
         <a href="#about-title" class="inline-block px-8 py-3 border-2 border-cyan-400 rounded-lg text-cyan-400 font-semibold hover:bg-cyan-500 hover:text-white transition focus:ring-4 focus:ring-cyan-300" role="button" tabindex="0">Learn More</a>
-        <a href="Niraj MCA-20240210001.pdf" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 font-semibold transition focus:ring-4 focus:ring-slate-500" role="button" tabindex="0">Get Resume</a>
+        <a href="src\Niraj MCA-20240210001.pdf" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 font-semibold transition focus:ring-4 focus:ring-slate-500" role="button" tabindex="0">Get Resume</a>
       </div>
     </section>
 
@@ -138,7 +163,7 @@
   <section class="w-full flex flex-col md:flex-row items-center gap-12 bg-slate-800 bg-opacity-70 rounded-2xl p-8 mt-16 shadow-lg">
     <!-- Profile Image -->
     <div class="flex-shrink-0 w-72 h-80 rounded-2xl overflow-hidden bg-slate-700 flex items-center justify-center">
-      <img src="profile.jpg" alt="Profile" class="object-cover w-full h-full" />
+      <img src="src\profile.jpg" alt="Profile" class="object-cover w-full h-full" />
     </div>
     <!-- About Content -->
     <div class="flex-1">
@@ -158,7 +183,7 @@
       </blockquote>
       <div class="flex flex-wrap gap-4">
         <a href="projects.html" class="inline-block px-6 py-3 border-2 border-cyan-400 rounded-lg text-cyan-400 font-semibold hover:bg-cyan-500 hover:text-white transition focus:ring-4 focus:ring-cyan-300" role="button" tabindex="0">View My Work</a>
-        <a href="Niraj MCA-20240210001.pdf" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 font-semibold transition focus:ring-4 focus:ring-slate-500" role="button" tabindex="0">Download Resume</a>
+        <a href="src\Niraj MCA-20240210001.pdf" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 font-semibold transition focus:ring-4 focus:ring-slate-500" role="button" tabindex="0">Download Resume</a>
       </div>
     </div>
   </section>
